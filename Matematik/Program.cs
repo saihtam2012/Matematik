@@ -11,6 +11,7 @@ namespace Matematik
             Console.WriteLine();
             Console.WriteLine("Beregner");
             Console.WriteLine("Omkreds, areal eller rumfang");
+            Console.WriteLine("Hvis du vil regne med tal skal du skrive L");
             string op = Console.ReadLine();
 
 
@@ -57,6 +58,8 @@ namespace Matematik
                         Console.WriteLine($"Omkredsen af cirklen {dia * Math.PI:N2}");
                         Console.ReadLine();
                     }
+
+
 
                 }
 
@@ -149,6 +152,7 @@ namespace Matematik
                         
                     }
 
+
                      
                         Console.ReadLine();
 
@@ -158,8 +162,36 @@ namespace Matematik
                 
 
             }
+            string i;
+            if (op == "L" || op == "l")
+            {
+                Console.WriteLine("Skrv det første tal");
+                i = Console.ReadLine();
+                double tal1 = Convert.ToDouble(i);
+                Console.WriteLine("Skriv regnemetode");
+                i = Console.ReadLine();
+                string regne1 = Convert.ToString(i);
 
-
+                Console.WriteLine("Skriv det andet tal");
+                i = Console.ReadLine();
+                double tal2 = Convert.ToDouble(i);
+                if (regne1 == "+")
+                {
+                    Console.WriteLine($"Tallet giver {tal1 + tal2}");
+                }
+                if (regne1 == "-")
+                {
+                    Console.WriteLine($"Tallet giver {tal1 - tal2}");
+                }
+                if (regne1 == "*")
+                {
+                    Console.WriteLine($"Tallet giver {tal1 * tal2}");
+                }
+                if (regne1 == "/")
+                {
+                    Console.WriteLine($"Tallet giver {tal1 / tal2}");
+                }
+            }
 
 
 
